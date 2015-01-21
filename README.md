@@ -1,125 +1,148 @@
 # Wasta
-Wasta
+
 User Registration to buy/sell event tickets
 
 Create New User
 
-POST  http://api.wasta.com/user
+POST  https://api.wasta.com/v1/users
 
 When the creation is successful,the Location header contains the URL for the new user:
 
-http://api.wasta.com/user/<id>
+https://api.wasta.com/v1/users/:id
 
 
 Logging in returning User
 
-GET   http://api.wasta.com/login
+GET   https://api.wasta.com/v1/login
 
 Requesting Password Reset
 
-POST http://api.wasta.com/requestPasswordReset
+POST https://api.wasta.com/v1/requestPasswordReset
 
-Retrieve Users
+Retrieve Single User
 
-GET http://api.wasta.com/user/<id>
+GET https://api.wasta.com/v1/users/:id
 
 Retrieve User in the Current Session
 
-GET http://api.wasta.com/me
+GET https://api.wasta.com/v1/users/me
 
 me -- login user in the session
 
-Updating User Data
+Updating User Data for specific attributes
 
-POST http://api.wasta.com/user/<id>
+PATCH https://api.wasta.com/v1/users/:id
+
+Updating user data 
+
+PUT https://api.wasta.com/v1/users/:id
+
+Delete the user record
+
+DELETE httpss://api.watsa.com/v1/users/:id
 
 Linking Users with Facebook,Twitter,Gmail
 
-POST https://api.wasta.com/users
+POST httpss://api.wasta.com/v1/users
 
 User Exists
 
-GET http://api.wasta.com/user/exists
+GET https://api.wasta.com/v1/users/exists
 
 Logout
 
-POST http://api.wasta.com/user/<id>/logout
+POST https://api.wasta.com/v1/users/:id/logout
 
 Event Listing in UserProfile
 
-GET http://api.wasta.com/user/events/<id>
+GET https://api.wasta.com/v1/users/events/:id
 
 Event Registration
 
 Create Event
 
-POST http://api.wasta.com/event/createEvent
+POST httpss://api.watsa.com/v1/venues/:venueId/events
 
-Retrieve Event
+Retrieve Specific Event
 
-GET http://api.wasta.com/event/<id>
+GET https://api.wasta.com/v1/venues/:venueId/events
 
 Retrieve All events
 
-GET http://api.wasta.com/event/find
+GET https://api.wasta.com/v1/venues/:venueId/events/find
 
-Update Event
+Update Specific Event Attributes
 
-POST http://api.wasta.com/event/update/<id>
+PATCH https://api.wasta.com/venues/:venueId/events
+
+Update All Event Attributes
+
+POST https://api.wasta.com/venues/:venueId/events
 
 Delete Event
 
-DELETE http://api.wasta.com/event/delete/<id>
+DELETE https://api.wasta.com/venues/:venueId/events
 
 Activate Event
 
-POST http://api.wasta.com/event/activate/<id>
+POST https://api.wasta.com/venues/:venueId/events/activate
 
-Ticket Categories
+Ticket Categories Event Based
 
-GET http://api.wasta.com/event/ticketCategories/<id>
+GET https://api.wasta.com/venues/:venueId/events/ticketCategories
 
 E.g.. VIP,First Class,..
 
 Ticket Holders of the Events
 
-GET http://api.wasta.com/event/participants/<id>
+GET https://api.wasta.com/venues/:venueId/events/participants 
 
 Payments
 
-GET http://api.wasta.com/event/payment/<id>
+GET https://api.wasta.com/venues/:venueId/events/payments
 
 Retrieves Payment details w.r.t to an event for an individual
 
 Create Payment
 
-POST http://api.wasta.com/event/payment/create/<id>
+POST https://api.wasta.com/venues/:venueId/events/payments
 
 Ticket Count
 
-POST http://api.wasta.com/event/payment/ticketCount/<id>
+POST https://api.wasta.com/venues/:venueId/events/ticketCounts
 
 Create Payment API will be dependent on Ticket Count API to get the sum of tickets
 
 Discount
 
-POST http://api.wasta.com/event/payment/discCode/<id>
+POST https://api.wasta.com/venues/:venueId/events/payments/discCodes
 
 Final Payment
 
-POST http://api.wasta.com/event/payment/finalPay/<id>
+POST https://api.wasta.com/venues/:venueId/events/payments/finalPayments
 
 Tickets
 
-GET http://api.wasta.com/ticket/<id>
+GET https://api.wasta.com/venues/:venueId/events/tickets
 
-Update Ticket
+Update Specific Ticket Attributes
 
-POST http://api.wasta.com/updateTicket/<id>
+PATCH https://api.wasta.com/venues/:venueId/events/tickets/:ticketId
 
-Find all
+Update Ticket Attributes
 
-GET http://api.wasta.com/ticket/find
+POST https://api.wasta.com/venues/:venueId/events/tickets/:ticketId
+
+Find all tickets of an event
+
+GET https://api.wasta.com/venues/:venueId/events/tickets/find
+
+
+
+
+
+
+
 
 
 
