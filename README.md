@@ -39,11 +39,11 @@ PUT https://api.wasta.com/v1/users/:id
 
 Delete the user record
 
-DELETE httpss://api.watsa.com/v1/users/:id
+DELETE https://api.watsa.com/v1/users/:id
 
 Linking Users with Facebook,Twitter,Gmail
 
-POST httpss://api.wasta.com/v1/users
+POST https://api.wasta.com/v1/users
 
 User Exists
 
@@ -61,7 +61,7 @@ Event Registration
 
 Create Event
 
-POST httpss://api.watsa.com/v1/venues/:venueId/events
+POST https://api.watsa.com/v1/venues/:venueId/events
 
 Retrieve Specific Event
 
